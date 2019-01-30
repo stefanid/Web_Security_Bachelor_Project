@@ -1,0 +1,136 @@
+
+
+<div class="jumbotron jumbotron-shop-page p-3 p-md-5 text-white rounded darken-background darken-with-text">
+    <div class="text-center jumbotron-content">
+        <h1 class="text-uppercase font-weight-bold">GRAB IT BEFORE IT'S GONE...<br> SALE'S NOW UP TO 60% OFF</h1>
+    </div>
+</div>
+
+<section class="products-grid">
+    <p id="product-number" class="text-center"></p>
+    <section class="filter-sort">
+        <p>Filter</p>
+        <div id="filters" class="button-group"> <button class="button is-checked" data-filter="*">show all</button>
+            <button class="button" data-filter=".women">women</button>
+            <button class="button" data-filter=".men">men</button>
+            <button class="button" data-filter=".accessories">accessories</button>
+            <button class="button" data-filter=".shoes">shoes</button>
+        </div>
+
+        <p>Sort</p>
+        <div id="sorts" class="button-group">
+            <button class="button is-checked" data-sort-by="original-order">reset</button>
+            <button class="button" data-sort-by="name">name</button>
+            <button class="button" data-sort-by="price">price</button>
+        </div>
+    </section>
+    <div class="row" id="lblShopList">
+    </div>
+</section>
+<section class="futures">
+    <h3>Our futures</h3>
+    <div class="row">
+        <div class="col-4 text-center">
+            <span class="futures-icon-one"></span>
+            <h4>Quality</h4>
+            <p>Our customers are what it matters! Best quality is ensured with us!</p>
+        </div>
+        <div class="col-4 text-center">
+            <span class="futures-icon-two"></span>
+            <h4>Best prices</h4>
+            <p>Prices which you can't find anywhere else!</p>
+        </div>
+        <div class="col-4 text-center">
+            <span class="futures-icon-three"></span>
+            <h4>Free delivery</h4>
+            <p>We offer free delivery all over the world!</p>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <form id="frmLogin">
+                    <div class="md-form mb-5">
+                        <i class="fa fa-user prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="userName">Username</label>
+                        <input type="text" id="userName" name="userName" class="form-control validate">
+                    </div>
+
+                    <div class="md-form mb-4">
+                        <i class="fa fa-lock prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control validate">
+                    </div>
+                    <button class="btn btn-dark my-2 my-sm-0 w-100 mr-3 text-uppercase" type="button" id="btnLogin">Login</button>
+                    <span class="err-msg" id="login-err-msg"></span>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Register</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <form id="frmRegister" enctype="multipart/form-data" action="https://localhost:8443/user" method="post">
+                    <div class="md-form mb-5">
+                        <i class="fa fa-user prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="new-user-name">Name</label>
+                        <input type="text" id="new-user-name" name="name" class="form-control validate">
+                    </div>
+                    <div class="md-form mb-5">
+                        <i class="fa fa-map-marker prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="new-user-address">Address</label>
+                        <input type="text" id="new-user-address" name="address" class="form-control validate">
+                    </div>
+                    <div class="md-form mb-5">
+                        <i class="fa fa-phone prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="new-user-phone">Phone</label>
+                        <input type="text" id="new-user-phone" name="phone" class="form-control validate">
+                    </div>
+                    <div class="md-form mb-5">
+                        <i class="fa fa-at prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="new-user-email">Email</label>
+                        <input type="email" id="new-user-email" name="email" class="form-control validate">
+                    </div>
+                    <div class="md-form mb-5">
+                        <i class="fa fa-user prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="new-user-userName">User name</label>
+                        <input type="text" id="new-user-userName" name="userName" class="form-control validate">
+                    </div>
+                    <div class="md-form mb-4">
+                        <i class="fa fa-lock prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="new-user-pass">Password</label>
+                        <input type="password" id="new-user-pass" name="password" class="form-control validate">
+                    </div>
+                    <div class="md-form mb-4">
+                        <i class="fa fa-image prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="new-user-image">Image</label>
+                        <input type="file" id="new-user-image" name="image" class="form-control validate">
+                    </div>
+                    <button class="btn btn-dark my-2 my-sm-0 w-100 mr-3 text-uppercase" id="btnRegister" type="submit">Register</button>
+                    <span class="err-msg" id="register-err-msg"></span>
+                    <span class="success-msg d-none" id="register-success-msg">You have been successfully registered in our system! <a href="#" id="proceed-to-login">You can proceed to login</a></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
